@@ -1,0 +1,106 @@
+<style>
+    body{
+        background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(192,181,218,1) 51%, rgba(148,187,233,1) 100%);
+
+    }
+    
+    table{
+        top:50%;
+        left:45%;
+    }
+        
+  a{
+    text-decoration: none;
+    display: inline;
+
+}
+h1{
+    margin-bottom: 10px;
+    
+}
+nav{
+    width: 100%;
+    display: flex;
+     background-color: aliceblue;
+    border-radius: 20px;
+    justify-content: space-between;
+    text-align: right;
+    padding-left: 10px;
+        padding-right: 10px;
+
+}
+    .table{
+        left: 50%;
+        top:60%;
+    
+        position: absolute;
+        transform: translate(-50%,-50%);
+    }
+   .add{
+            position: absolute;
+            right: -15%;
+
+   }
+</style>
+<nav>
+<a href="/" class="home"><h3>HOME</h3></a>
+<a href="/" class="home"><h3>LOGOUT</h3></a>
+</nav>
+<h1 style="text-align: center;">{{hosname}} HOSPITAL</h1>
+    <h1 style="text-align: center;">One hour and you can save three lives with your blood !!!.</h1><br>
+<br><br>        {{!-- <a href="/order/?hos={{this.hos}}" class="edit">EDIT</a> --}}
+
+
+<div class="table">
+<table border="1"  >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>BLOOD</th>
+            <th>QUNATITY</th>
+            <th>UPDATE</th>
+            <th>DELETE</th>
+        </tr> 
+    </thead>
+    <tbody>
+       <tr>
+        {{#each overall}}
+        <td>{{this.id}}</td>
+        <td>{{this.blood}}</td>
+        <td> {{this.quantity}}</td>
+        <td><a href="/editdetails/?id={{this.id}} &hospital={{../hosname}}" class="edit">EDIT</a></td>
+        <td><a  href="/deletedetails/?id={{this.id}} &hospital={{../hosname}}" onclick="return confirm('Are You Sure')" class="delete">DELETE</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+
+</table>
+       
+        <h4 style="text-align: center ; " ><a href="/adduser/?hospital={{hosname}}" class="btn">ADD USER</a></h4>
+<div class="table-wrapper">
+    
+    <table class="fl-table" border="2">   
+          <thead>
+        <tr>
+        
+            <th>ORDERED BY</th>
+            <th>BLOOD GROUP</th>
+            <th>QUANTITY</th>
+            <th>CONTACT</th>
+            <th>DELIVERED</th>
+        </tr> 
+    </thead>
+    <tbody>
+       <tr>
+        {{#each orders}}
+        <td>{{this.name}}</td>
+        <td>{{this.bloodgroup}}</td>
+        <td> {{this.quantity}}</td>
+         <td>{{this.contact}}</td>
+         <td><a href="/deleteorder/?id={{this.id}}&hospital={{../hosname}}">DELIVERED</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,51 @@
+<style>
+ body{
+background-image: url('/image/login.jpg');
+}
+
+form{
+ left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border: 2px none;
+    padding: 70px;
+   border-radius: 30px;
+   background-color: lightgray;
+
+}
+label{
+  font-weight:bold;
+}
+</style>
+<h1 style="text-align: center;">EDIT BLOODS</h1>
+
+{{#each rows}}
+<form action="/edituser/?hospital={{../hos}}&id={{this.id}}" method="POST">
+<div id="addu"> 
+<br>  
+<label for="blood">BLOOD</label><br><br> 
+<input type="text" name="blood" required value="{{this.blood}}" >
+<br>
+<br>
+<label for="liter">QUNATITY&nbsp;&nbsp;&nbsp;&nbsp;</label><br> 
+ <br>
+ <input type="number" name="liter" required value="{{this.quantity}}">
+ <br>
+ <br>
+ <button type="submit" class="btn">SAVE</button>
+ </div>
+</form>
+{{/each}}
+
+
+
+
+
+
+
+
+
+
+
+

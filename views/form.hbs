@@ -1,0 +1,154 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to right top,#fff,#b9b9b9);
+    left: -80px;
+    position:relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .drop{
+    position: relative;
+   right: -25%;
+    width: 350px;
+    border-radius: 30px;
+    height: 350px;
+    box-shadow: inset 20px 20px 20px rgba(209, 23, 17, 0.621),25px 35px 20px rgba(201, 69, 69, 0.348),25px 30px 30px rgba(151, 29, 29, 0.05),
+    inset -20px -20px 25px rgba(233, 225, 235, 0.621);
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .drop:hover{
+    border-radius: 50%;
+}
+.container .drop::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 85px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background:rgba(255,255,255,0.25) 50%;
+    opacity: 0.9;
+}
+.container .drop::after{
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 110px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    
+}
+.container .drop .content{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 15px;
+}
+.container .drop .content h2{
+    position: relative;
+    color:black;
+    font-size: 1.5em;
+}
+.container .drop .content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    left: -80px;
+}
+.container .drop .content form .inputBox{
+    position: relative;
+    width: 225px;
+    box-shadow: inset 2px 5px 10px rgba(240, 20, 20, 0.1), inset -2px -5px 10px rgba(255,255,255,1),15px 15px 10px rgba(0,0,0,0.05),
+    15px 10px 15px rgba(0,0,0,0.025);
+    border-radius: 25px;
+}
+.container .drop .content form .inputBox::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 5px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 5px;
+}
+.container .drop .content form .inputBox input{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 15px;
+}
+.container .drop .content form .inputBox input[type="submit"]{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    cursor: pointer;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+}
+.container .drop .content form .inputBox:last-child{
+    width: 100px;
+    background:#E96CAC;
+    box-shadow: inset 2px 5px 10px rgba(221, 28, 28, 0.1), rgb(219, 15, 15),15px 15px 10px rgba(0,0,0,0.05),
+    15px 10px 15px rgba(192, 31, 31, 0.025);
+    transition: 0.5s;
+}
+.container .drop .content form .inputBox:last-child:hover{
+    width: 150px;
+}
+
+</style>
+<div class="admin">
+ <br>
+     <div class="container">
+       <div class="drop">
+        <div class="content">
+
+            <form action="/edit" method="post">
+                <h1 style="text-align: center;">ADMIN </h1>
+
+                <div class="inputBox">
+         <input type="text" name="hospitalname"  placeholder="Hospital name" required>
+                </div>
+                
+                <div class="inputBox">
+                <input type="password" name="password" required placeholder="Password" required>
+                </div>
+                
+                <div class="inputBox">
+                 <input type="submit">
+                </div>
+            </form>
+
+        </div>
+       </div>
+      </div> 
+</div>

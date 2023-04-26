@@ -1,0 +1,68 @@
+<style>
+     body{
+background: rgb(247, 111, 170);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+   
+}
+form{
+
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    border: 2px none;
+    padding: 70px;
+    background-color: lightgray;
+   border-radius: 30px;
+}
+input{
+    padding: 7px;
+    border-radius: 20px;
+}
+h1{
+    text-align: center;
+}
+button
+{
+
+  background-color: antiquewhite;
+  border-radius: 8px;
+  width: 110px;
+ left: 250px;
+
+}
+</style>
+<h1>ADD NEW BLOODS</h1>
+<form action="/adduser/" method="POST">
+<div id="addu">
+  <label for="hosp">ID</label>
+<br>
+<br>
+<input type="text" name="id" id="id" required >
+<br>
+<br>  
+  <label for="hosp">HOSPITAL NAME</label>
+<br>
+<br>
+<input type="text" name="hosp" id="hosp" required >
+<br>
+<br>  
+<label for="blood">BLOOD</label>
+<br>
+<br>
+<input type="text" name="blood" id="blood" required >
+<br>
+<br>
+<label for="liter">QUNATITY&nbsp;&nbsp;&nbsp;&nbsp;</label>
+ <br>
+ <br>
+ <input type="number" name="liter" id="liter" required>
+ <br>
+ <br>
+
+ <button type="submit" class="btn">SUBMIT</button>
+ </div>
+</form>
+
+
+

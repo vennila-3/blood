@@ -1,0 +1,106 @@
+<style>
+   body{
+       margin-top: 0%;
+   }
+  img{
+    margin-left: 40%;
+   position: relative;
+   overflow-x: unset;
+   overflow-y: unset;
+   height: 580px;
+width: 60%;
+margin-top: 5px;
+  }
+
+  
+    .table{
+        left: 20%;
+        top:50%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+       size: 10px;
+      
+    }
+    table{
+         border:1px solid darkblue;
+         border-collapse: collapse;
+         width: 350px;
+         height: 300px;
+         text-align: center;
+         justify-content: center;
+    }
+    th{
+        background-color: powderblue;
+        padding: 10px;
+    }
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+a :hover{
+    background-color: white;
+}
+nav{
+  
+     width: 100%;
+    display: flex;
+    
+     justify-content: right; 
+     margin-top: 0px;
+    background-color: lightcoral;
+
+}
+#img-div{
+    overflow: hidden;
+    overflow-x: unset;
+    overflow-y: unset;
+}
+#hos{
+    
+    text-align: center;
+    background: -webkit-linear-gradient(red, pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+</style>
+<nav>
+   
+
+
+<a href="/book"><h3>BOOK</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/admin"><h3>ADMIN</h3></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/"><h3>HOME</h3></a>
+</nav>
+
+<div id="img-div"><img src="/image/blood2.jpg" alt="image">
+</div>
+
+<div class="table" style="align-items: center;">
+
+
+
+ <div style="justify-content:baseline"><h1 id="hos">{{hos}}</h1></div>
+
+<table border="1"  >
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>BLOOD</th>
+            <th>QUNATITY</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+    {{#each rows}}
+       <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.blood}}</td>
+       <td> {{this.quantity}}</td>
+        
+        </tr>
+        {{/each}}
+</tbody>
+</table>
+</div>

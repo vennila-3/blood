@@ -1,0 +1,204 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+   nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: right;
+    background-color: aliceblue;
+  padding: 0.9%;
+   }
+   a{
+    text-decoration: none;
+    color: black;
+   }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 50px;
+}
+.container .box{
+    position: relative;
+    width: 320px;
+    height: 320px;
+background-image: linear-gradient(to right top, #ff1493, #f874c9, #eeaaed, #edd8fe, #ffffff);    margin:20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after{
+    background: linear-gradient(315deg,#03a9f4,#ff0058);
+
+}
+.container .box:nth-child(2)::before,
+.container .box:nth-child(2)::after{
+    background: linear-gradient(315deg,#03a9f4,#ff0058);
+    
+}
+.container .box b{
+    position: absolute;
+    inset: 6px;
+    z-index: 2;
+}
+.container .box img {
+    border-radius: 8px;
+    position :relative;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    scale: 0.8;
+    transition: 0.5s;
+}
+.container .box:hover img{
+scale: 0.6;
+
+}
+.container .box .content{
+
+    position:absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+    transform: scale(1);
+    z-index: 3;
+}
+
+   
+.container .box h2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1em;
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.container .box h2 span{
+    font-weight: 300;
+    font-size: 0.75em;
+}
+.container .box .sci {
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 5px;
+}
+.container .box .sci li{
+    list-style:none;
+}
+.container .box .sci li  a {
+position: relative;
+color: rgba(255,255,255,0.5);
+background: rgba(0,0,0,0.2);
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 4px;
+text-decoration: none;
+transition: 0.5s;
+}
+.container .box .sci li a:hover {
+    color: rgba(255,255,255,1);   
+}
+a h1{
+ 
+    text-decoration: none;
+}
+</style>
+<div class="front">
+<nav>
+<a href="/book"><h3>BOOK</h3></a>
+<a href="/admin"><h3>Admin</h3></a>
+<a href="/"><h3>HOME</h3></a>
+</nav>
+<h1 style="text-align: center;">BLOOD MANAGEMENT</h1> 
+<h2 style="text-align: center;">BE THE REASON FOR SOMEONE'S HEARTBEAT!!!</h2>
+<div class="logo">
+           
+        </div>
+        <div class="container">
+            <div class="box">
+                <b></b>
+         <img src="image/one.png" >
+                <div class="content">
+                    <a href="/hospital/?name=GANGA"><h3>GANGA HOSPITAL</h3></a>
+                   </div>
+            </div>
+             <div class="box">
+                <b></b>
+                <img src="image/hospital.jpg" >
+                <div class="content">
+                   <a href="/hospital/?name=ARUN"><h3>ARUN HOSPITAL</h3></a>
+                   
+                   </div>
+            </div>
+             <div class="box">
+                <b></b>
+                <img src="image/hospitals.jpg" >
+                <div class="content">
+                   <a href="/hospital/?name=SURIYA"><h3>SURIYA HOSPITAL</h3></a>
+                   
+                   </div>
+            </div>
+             <div class="box">
+                <b></b>
+                <img src="image/hospital3.jpg" >
+                <div class="content">
+                   <a href="/hospital/?name=KUPPUSWAMY_NAIDU"><h3>KUPPUSWAMY NAIDU HOSPITAL</h3></a>
+                   
+                   </div>
+            </div>
+             <div class="box">
+                <b></b>
+                <img src="image/hospital5.jpg" >
+                <div class="content">
+                   <a href="/hospital/?name=PSG"><h3>PSG HOSPITAL</h3></a>
+                   
+                   </div>
+            </div>
+             <div class="box">
+                <b></b>
+                <img src="image/hospital6.jpg" >
+                <div class="content">
+                   <a href="/hospital/?name=KOVAI_MEDICAL"><h3>KOVAI MEDICAL HOSPITAL</h3></a>
+                   </div>
+            </div>
+        </div>
+<footer >
+    <h1 style="text-align: center;">ONE HOUR AND YOU CAN SAVE THREE LIVES WITH YOUR BLOOD hour  !!!.</h1>
+</footer>
+</div>
+
+
